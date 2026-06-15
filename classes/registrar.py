@@ -16,73 +16,28 @@ class AcademicRegistrar:
             department = Department(name)
             department.courses = courses
             self.departements.append(department)
-        except Exception as e:
-            print(f"Error adding department: {e}")
-    
-    def remove_department(self, name):
-        try:
-            for department in self.departements:
-                if department.name == name:
-                    self.departements.remove(department)
-                    return
-            print(f"Department {name} not found")
-        except Exception as e:
-            print(f"Error removing department: {e}")
 
-    def get_departments(self):
-        if self.departements:
-            return self.departements
-        else:
-            print("No departments found")
-            return []
-
-    def get_department(self, name):
-        try:
-            for department in self.departements:
-                if department.name == name:
-                    return department
-            print(f"Department {name} not found")
-            return None
-        except Exception as e:
-            print(f"Error getting department: {e}")
-            return None
+            # log code
+            return True
         
-    def update_department(self, name, new_name=None, new_courses=None):
-        try:
-            department = self.get_department(name)
-            if department:
-                if new_name:
-                    department.name = new_name
-                if new_courses:
-                    department.courses = new_courses
-                return department
-            elif department is None:
-                print(f"Department {name} not found")
-                return None 
         except Exception as e:
-            print(f"Error updating department: {e}")
-            return None
-        
-
-    # manage students
-    def register_student(self, id, first_name, last_name, other_name=None, major=None):
-        try:
-            student = Student(id, first_name, last_name, other_name)
-            student.major = major
-            self.students.append(student)
-            return student
-        except Exception as e:
-            print(f"Error registering student: {e}")
-            return None
-        
-    def remove_student(self, id):
-        try:
-            for student in self.students:
-                if student.id == id:
-                    self.students.remove(student)
-                    return True
-            print(f"Student with ID {id} not found")
+            #log code to signal error
             return False
+    
+    def remove_departement(self, name):
+        try:
+            department_generator = (d for d in self.departements if d.name == name)
+
+            department = next(department_generator, None)
+
+            if department:
+                self.departments.remove(department)
+                # logger infor
+                return True
+            else:
+                # logger infor
+                return False
+
         except Exception as e:
-            print(f"Error removing student: {e}")
+            #logger infor
             return False
