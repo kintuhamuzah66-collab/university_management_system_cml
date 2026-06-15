@@ -58,9 +58,31 @@ class AcademicRegistrar:
                 return department
             elif department is None:
                 print(f"Department {name} not found")
-                return None
+                return None 
         except Exception as e:
             print(f"Error updating department: {e}")
             return None
         
+
+    # manage students
+    def register_student(self, id, first_name, last_name, other_name=None, major=None):
+        try:
+            student = Student(id, first_name, last_name, other_name)
+            student.major = major
+            self.students.append(student)
+            return student
+        except Exception as e:
+            print(f"Error registering student: {e}")
+            return None
         
+    def remove_student(self, id):
+        try:
+            for student in self.students:
+                if student.id == id:
+                    self.students.remove(student)
+                    return True
+            print(f"Student with ID {id} not found")
+            return False
+        except Exception as e:
+            print(f"Error removing student: {e}")
+            return False
