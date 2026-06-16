@@ -17,10 +17,9 @@ class AcademicRegistrar(Person):
         self.lecturers = []
 
     # manage departments
-    def add_department(self, name, courses):
+    def add_department(self, name):
         try:
             department = Department(name)
-            department.courses = courses
             self.departments.append(department)
 
             logger.info(f"Department {department.name} successfully added")
@@ -64,4 +63,9 @@ class AcademicRegistrar(Person):
         except Exception as e:
             logger.exception("Something went wrong")
             return False
-        
+
+    def add_courses_to_department(self, name):
+        try:
+            pass
+        except Exception as e:
+            pass
