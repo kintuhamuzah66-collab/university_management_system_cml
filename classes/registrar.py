@@ -1,17 +1,18 @@
 from .lecturer import Lecturer
 from .student import Student
 from .department import Department
+from .person import Person
 
 import logging
 
 logger = logging.getLogger(__name__)
 
 
-class AcademicRegistrar:
+class AcademicRegistrar(Person):
     def __init__(self, id, first_name, last_name, other_name=None):
         super().__init__(id, first_name, last_name, other_name)
         
-        self.departements = []
+        self.departments = []
         self.students = []
         self.lecturers = []
 
@@ -37,25 +38,14 @@ class AcademicRegistrar:
 
             if department:
                 self.departments.remove(department)
-                # logger infor
+                logger.info(f"{department.name} successfully removed")
                 return True
             else:
-                # logger infor
+                logger.warning(f"Department not found!")
                 return False
 
         except Exception as e:
-            #logger infor
+            logger.exception("Something went wrong")
             return False
         
-
-
-
-if __name__ == "__main__":
-    # Configure logging to print to the console with a clean format
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s - %(levelname)s - %(message)s",
-    )
-
-    # Now run your code, and your logs will appear!
     

@@ -19,8 +19,8 @@ def main():
     logger.info("Starting the application...")
 
     # Initialize your manager and run your code
-    mgr = AcademicRegistrar("Kintu", "Hamza")
-    mgr.remove_departement("HR")
+    mgr = AcademicRegistrar("REG0001", "Kintu", "Hamza")
+    mgr.remove_department("HR")
 
     logger.info("Application finished.")
 
