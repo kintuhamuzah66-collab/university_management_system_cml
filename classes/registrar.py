@@ -48,4 +48,20 @@ class AcademicRegistrar(Person):
             logger.exception("Something went wrong")
             return False
         
-    
+    def find_department(self, name):
+        try:
+            department_generator = (s for s in self.departments if s.name == name)
+
+            department = next(department_generator, None)
+
+            if department:
+                logger.info(f"{department.name} found")
+                return department
+            else:
+                logger.warning(f"Department not found!")
+                return False
+            
+        except Exception as e:
+            logger.exception("Something went wrong")
+            return False
+        
