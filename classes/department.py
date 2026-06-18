@@ -14,7 +14,7 @@ class Department:
     
     @name.setter
     def name(self, value):
-        if not value or str(value).strip():
+        if not value or not str(value).strip():
             # log and raise error
             logger.error("Failed to set department name. It cannot be empty")
             raise ValueError("Department name cannot be empty!")
