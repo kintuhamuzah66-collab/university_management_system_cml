@@ -23,6 +23,7 @@ class Course:
             raise ValueError("Course code cannot be empty")
         # set course course
         self._code = value
+        logger.info(f"Course code set to: {self._code}")
 
     # name properties
     @property
@@ -37,12 +38,17 @@ class Course:
             raise ValueError("Course name cannot be empty")
         # set course name
         self._name = value
+        logger.info(f"Course name set to {self._name}")
 
     # course unit properites
     @property
     def course_units(self):
         return tuple(self._course_units)
     
-    # add course units to course
     def add_course_unit(self, course_unit: CourseUnit):
-        pass
+        """ Adds course unit to course if it does not exist"""
+        if course_unit in self._course_units:
+            logger.warning("Course Unit already exits!")
+            return
+        self._course_units.append(course_unit)
+        logger.info(f"{course_unit.name} successfully added to {self._name}")
