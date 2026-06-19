@@ -1,7 +1,10 @@
+from typing import TYPE_CHECKING
 import logging
 logger = logging.getLogger(__name__)
 
-from classes.course import Course
+if TYPE_CHECKING:
+    from classes.course import Course
+
 
 class Department:
     def __init__(self, name):
@@ -28,7 +31,7 @@ class Department:
     def courses(self):
         return tuple(self._courses)
     
-    def add_course(self, course: Course):
+    def add_course(self, course: 'Course'):
         """Adds course to department courses if it does not already exist"""
 
         if course in self._courses:

@@ -1,7 +1,9 @@
+from typing import TYPE_CHECKING
 import logging
 logger = logging.getLogger(__name__)
 
-from classes.course_unit import CourseUnit
+if TYPE_CHECKING:
+    from classes.course_unit import CourseUnit
 
 class Course:
     def __init__(self, code, name, department):
@@ -45,7 +47,7 @@ class Course:
     def course_units(self):
         return tuple(self._course_units)
     
-    def add_course_unit(self, course_unit: CourseUnit):
+    def add_course_unit(self, course_unit: 'CourseUnit'):
         """ Adds course unit to course if it does not exist"""
         if course_unit in self._course_units:
             logger.warning("Course Unit already exits!")
