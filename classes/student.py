@@ -8,6 +8,9 @@ class Student(Person):
         super().__init__(personal_id, full_name)
         self.major = major
 
+    def __str__(self):
+        return f"ID: {self.personal_id}\nName: {self.full_name} Major: {self.major}"
+
     # major properties
     @property
     def major(self):

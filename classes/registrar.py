@@ -16,15 +16,15 @@ class AcademicRegistrar():
 
     @property
     def departments(self):
-        return (self._departments)
+        return tuple(self._departments)
     
     @property
     def students(self):
-        return (self._students)
+        return tuple(self._students)
     
     @property
     def lecturers(self):
-        return (self._lecturers)
+        return tuple(self._lecturers)
     
     # Get student, department or lecturer
     def get_student(self, p_id):
@@ -122,5 +122,3 @@ class AcademicRegistrar():
         except Exception:
             logger.exception("Something went wrong")
             return False
-
-    
