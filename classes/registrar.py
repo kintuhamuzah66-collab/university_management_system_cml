@@ -10,9 +10,9 @@ if TYPE_CHECKING:
 
 class AcademicRegistrar():
     def __init__(self):
-        self.departments = []
-        self.students = []
-        self.lecturers = []
+        self._departments = []
+        self._students = []
+        self._lecturers = []
 
     @property
     def departments(self):

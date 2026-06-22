@@ -1,3 +1,5 @@
+import logging
+logger = logging.getLogger(__name__)
 import sys
 
 from classes.course import Course
@@ -15,8 +17,7 @@ def menu():
     registrar = AcademicRegistrar()
 
     while True:
-        choice = input("Enter choice: ")
-        print("Mange Students". center(30))
+        print("\nMange Students". center(30))
         print("1. Register Student")
         print("2. Show registered students")
         print("3. Search student")
@@ -31,7 +32,10 @@ def menu():
         print("8. Show registered departments")
         print("9. Search department")
 
-        print("10. Exit")
+        print("10. Exit\n\n")
+
+        choice = input("Enter choice: ")
+        print("\n")
 
         if choice == "1":
             full_name = input("Enter full name: ").strip()
@@ -39,7 +43,8 @@ def menu():
             student_id = input("Assign personal number: ").strip()
 
             student = Student(student_id, full_name, major)
-            registrar.register_student(student)
+            if registrar.register_student(student):
+                logger.info("Student successfully registered")
         elif choice == "2":
             students = registrar.students
             for student in  students:
