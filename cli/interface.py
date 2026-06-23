@@ -70,4 +70,4 @@ def menu():
             pass
         elif choice == "10":
             print("Exiting......")
-            sys.exit()
+            break
