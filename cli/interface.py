@@ -50,7 +50,12 @@ def menu():
             for student in  students:
                 print(student)
         elif choice == "3":
-            pass
+            personal_number = input("Enter student personal number: ")
+            student = registrar.get_student
+            if student:
+                print(student)
+            else:
+                print("Student not found!")
         elif choice == "4":
             pass
         elif choice == "5":

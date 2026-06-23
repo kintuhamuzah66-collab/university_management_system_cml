@@ -26,12 +26,12 @@ class AcademicRegistrar():
     def lecturers(self):
         return tuple(self._lecturers)
     
-    # Get student, department or lecturer
     def get_student(self, p_id):
         """Searches for a student by id"""
         try:
-            search_student = (s for s in self.students if s.personal_id == p_id)
-            student = next(search_student, 0)
+            # Use self._students directly for slight performance, or keep self.students
+            search_student = (s for s in self._students if s.personal_id == p_id)
+            student = next(search_student, None) 
             if student:
                 logger.info(f"Student {student.full_name} is found")
                 return student 
@@ -45,8 +45,8 @@ class AcademicRegistrar():
     def get_department(self, name):
         """Searches for a department by name"""
         try:
-            search_department = (d for d in self.departments if d.name == name)
-            department = next(search_department, 0)
+            search_department = (d for d in self._departments if d.name == name)
+            department = next(search_department, None)
 
             if department:
                 logger.info(f"Department with name: {department.name} successfully found")
@@ -61,8 +61,8 @@ class AcademicRegistrar():
     def get_lecturer(self, p_id):
         """Searches for a lecturer by id"""
         try:
-            search_lecturer = (l for l in self.lecturers if l.personal_id == p_id)
-            lecturer = next(search_lecturer, 0)
+            search_lecturer = (l for l in self._lecturers if l.personal_id == p_id)
+            lecturer = next(search_lecturer, None)
 
             if lecturer:
                 logger.info(f"Lecturer with ID: {lecturer.personal_id} successfully found!")
@@ -74,7 +74,6 @@ class AcademicRegistrar():
             logger.exception("Something went wrong!")
             return False
 
-
     # REGISTRATION CORNER
     def register_student(self, student: 'Student'):
         """Registers new student"""
@@ -82,15 +81,15 @@ class AcademicRegistrar():
             if student in self._students:
                 logger.warning(f"{student.full_name} cannot be registered twice!")
                 return False
-            # check course if it exists in the departments
-            for department in self.departments:
+            
+            # Check if the course exists in ANY department
+            for department in self._departments:
                 if student.major in department.courses:
-                    self.students.append(student)
+                    self._students.append(student)  
                     logger.info("Student successfully registered to university")
                     return True
-                else:
-                    logger.warning(f"Course {student.major} not available")
-                    return False
+            logger.warning(f"Course {student.major} not available")
+            return False
         except Exception:
             logger.exception("Something went wrong!")
             return False
@@ -98,25 +97,25 @@ class AcademicRegistrar():
     def register_lecturer(self, lecturer: 'Lecturer'):
         """Registers new lecturer"""
         try:
-            if lecturer in self.lecturers:
+            if lecturer in self._lecturers:
                 logger.warning(f"Adding lecturer skipped. {lecturer.full_name} already exists!")
                 return False
             else:
-                self.lecturers.append(lecturer)
+                self._lecturers.append(lecturer)  # Fix: Mutate the private list
                 logger.info("Lecturer successfully registered")
                 return True
         except Exception:
             logger.exception("Something went wrong!")
-            return True
+            return False  # Fix: Return False on exception
     
     def register_department(self, department: 'Department'):
         """Adds a new department"""
         try:
-            if department in self.departments:
+            if department in self._departments:
                 logger.warning(f"Department addition skipped. {department.name} already exists")
                 return False
             else:
-                self.departments.append(department)
+                self._departments.append(department)  # Fix: Mutate the private list
                 logger.info(f"{department.name} successfully added to departments")
                 return True
         except Exception:
