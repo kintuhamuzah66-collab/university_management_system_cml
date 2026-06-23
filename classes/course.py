@@ -11,7 +11,7 @@ class Course:
         self.name = name
         self.department = department
 
-        self.course_units = []
+        self._codecourse_units = []
 
     @property
     def code(self):

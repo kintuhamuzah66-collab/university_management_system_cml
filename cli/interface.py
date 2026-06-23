@@ -31,8 +31,9 @@ def menu():
         print("7. Register Department")
         print("8. Show registered departments")
         print("9. Search department")
+        print("10. Add course to department")
 
-        print("10. Exit\n\n")
+        print("11. Exit\n\n")
 
         choice = input("Enter choice: ")
         print("\n")
@@ -50,8 +51,8 @@ def menu():
             for student in  students:
                 print(student)
         elif choice == "3":
-            personal_number = input("Enter student personal number: ")
-            student = registrar.get_student
+            personal_number = input("Enter student personal number: ").strip()
+            student = registrar.get_student(personal_number)
             if student:
                 print(student)
             else:
@@ -63,11 +64,32 @@ def menu():
         elif choice == "6":
             pass
         elif choice == "7":
-            pass
+            name = input("Enter department name: ").strip()
+            department = Department(name)
+            registrar.register_department(department)
         elif choice == "8":
-            pass
+            departments = registrar.departments
+            for department in departments:
+                print(department)
         elif choice == "9":
-            pass
+            name = input("Enter department name: ").strip()
+            department = registrar.get_department(name)
+            if department:
+                print(department)
+            else:
+                print("Department not found!")
         elif choice == "10":
+            # add course to department
+            department_name = input("Enter department name: ").strip()
+            department: 'Department' = registrar.get_department(department_name)
+            if department:
+                name = input("Enter course name: ").strip()
+                code = input("Enter course code: ").strip()
+                course = Course(code, name, department_name)
+                department.add_course(course)
+                print(f"{course.name} successfully added to {department.name}")
+            else:
+                print("Adding course failed!")
+        elif choice == "11":
             print("Exiting......")
             break

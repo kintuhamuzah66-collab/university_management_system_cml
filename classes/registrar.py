@@ -101,12 +101,12 @@ class AcademicRegistrar():
                 logger.warning(f"Adding lecturer skipped. {lecturer.full_name} already exists!")
                 return False
             else:
-                self._lecturers.append(lecturer)  # Fix: Mutate the private list
+                self._lecturers.append(lecturer)  
                 logger.info("Lecturer successfully registered")
                 return True
         except Exception:
             logger.exception("Something went wrong!")
-            return False  # Fix: Return False on exception
+            return False  
     
     def register_department(self, department: 'Department'):
         """Adds a new department"""
@@ -115,9 +115,21 @@ class AcademicRegistrar():
                 logger.warning(f"Department addition skipped. {department.name} already exists")
                 return False
             else:
-                self._departments.append(department)  # Fix: Mutate the private list
+                self._departments.append(department)  
                 logger.info(f"{department.name} successfully added to departments")
                 return True
         except Exception:
             logger.exception("Something went wrong")
+            return False
+        
+    def add_course_to_dep(self, course: 'Course'):
+        """Adds course to department"""
+        try:
+            department = self.get_department(course.department)
+            if department:
+                department.add_course(course)
+                logger.info("Course successfully added to department")
+                return True
+        except Exception:
+            logger.exception("Something went wrong!")
             return False

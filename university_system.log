@@ -10,3 +10,52 @@
 2026-06-23 10:28:05,958 - INFO - main started!
 2026-06-23 10:28:28,335 - WARNING - Course Computer Science not available
 2026-06-23 10:28:51,514 - INFO - main stopped
+2026-06-23 11:52:24,591 - INFO - main started!
+2026-06-23 11:52:52,443 - INFO - Department name set to: science and technology
+2026-06-23 11:52:52,444 - ERROR - Something went wrong
+Traceback (most recent call last):
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/main.py", line 17, in <module>
+    menu()
+    ~~~~^^
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/cli/interface.py", line 68, in menu
+    department = Department(name)
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/classes/department.py", line 13, in __init__
+    self.courses = []
+    ^^^^^^^^^^^^
+AttributeError: property 'courses' of 'Department' object has no setter
+2026-06-23 11:53:55,179 - INFO - main started!
+2026-06-23 11:54:02,671 - INFO - Department name set to: science and technology
+2026-06-23 11:54:02,672 - INFO - science and technology successfully added to departments
+2026-06-23 11:54:46,949 - INFO - Department with name: science and technology successfully found
+2026-06-23 11:55:08,961 - INFO - Course code set to: BACS
+2026-06-23 11:55:08,962 - INFO - Course name set to computer science
+2026-06-23 11:55:08,962 - ERROR - Something went wrong
+Traceback (most recent call last):
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/main.py", line 17, in <module>
+    menu()
+    ~~~~^^
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/cli/interface.py", line 88, in menu
+    course = Course(code, name, department_name)
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/classes/course.py", line 14, in __init__
+    self.course_units = []
+    ^^^^^^^^^^^^^^^^^
+AttributeError: property 'course_units' of 'Course' object has no setter
+2026-06-23 11:55:45,781 - INFO - main started!
+2026-06-23 11:55:55,586 - INFO - Department name set to: science and technology
+2026-06-23 11:55:55,587 - INFO - science and technology successfully added to departments
+2026-06-23 11:56:14,420 - INFO - Department with name: science and technology successfully found
+2026-06-23 11:56:43,506 - INFO - Department with name: science and technology successfully found
+2026-06-23 11:57:01,825 - INFO - Course code set to: BACS
+2026-06-23 11:57:01,825 - INFO - Course name set to computer science
+2026-06-23 11:57:01,826 - INFO - computer science successfully added to science and technology department
+2026-06-23 11:57:46,732 - INFO - main stopped
+2026-06-23 11:58:44,454 - INFO - main started!
+2026-06-23 11:58:58,376 - INFO - Department name set to: science and technology
+2026-06-23 11:58:58,376 - INFO - science and technology successfully added to departments
+2026-06-23 11:59:23,113 - INFO - Department with name: science and technology successfully found
+2026-06-23 11:59:41,335 - INFO - Department with name: science and technology successfully found
+2026-06-23 11:59:53,717 - INFO - Course code set to: BACS
+2026-06-23 11:59:53,718 - INFO - Course name set to computer science
+2026-06-23 11:59:53,718 - INFO - computer science successfully added to science and technology department
+2026-06-23 12:00:42,412 - WARNING - Course computer science not available
+2026-06-23 12:01:15,438 - INFO - main stopped

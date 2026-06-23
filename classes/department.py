@@ -10,7 +10,10 @@ class Department:
     def __init__(self, name):
         self.name = name
 
-        self.courses = []
+        self._courses = []
+
+    def __str__(self):
+        return f"{self.name}"
 
     @property
     def name(self):
