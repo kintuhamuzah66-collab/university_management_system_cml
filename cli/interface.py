@@ -39,6 +39,7 @@ def menu():
         print("\n")
 
         if choice == "1":
+            # Register student
             full_name = input("Enter full name: ").strip()
             major = input("Enter major (course): ").strip()
             student_id = input("Assign personal number: ").strip()
@@ -47,10 +48,12 @@ def menu():
             if registrar.register_student(student):
                 logger.info("Student successfully registered")
         elif choice == "2":
+            # show available students
             students = registrar.students
             for student in  students:
                 print(student)
         elif choice == "3":
+            # look for student by personal number
             personal_number = input("Enter student personal number: ").strip()
             student = registrar.get_student(personal_number)
             if student:
@@ -64,14 +67,24 @@ def menu():
         elif choice == "6":
             pass
         elif choice == "7":
+            # register department
             name = input("Enter department name: ").strip()
             department = Department(name)
-            registrar.register_department(department)
+            register = registrar.register_department(department)
+            if register:
+                print()
+            else:
+                print()
         elif choice == "8":
+            # show available departments
             departments = registrar.departments
-            for department in departments:
-                print(department)
+            if len(departments) == 0:
+                print("No department found!")
+            else:
+                for department in departments:
+                    print(department)
         elif choice == "9":
+            # Search department
             name = input("Enter department name: ").strip()
             department = registrar.get_department(name)
             if department:
