@@ -84,10 +84,11 @@ class AcademicRegistrar():
             
             # Check if the course exists in ANY department
             for department in self._departments:
-                if student.major in department.courses:
-                    self._students.append(student)  
-                    logger.info("Student successfully registered to university")
-                    return True
+                for course in department.courses:
+                    if course.code == student.major:
+                        self._students.append(student)  
+                        logger.info("Student successfully registered to university")
+                        return True
             logger.warning(f"Course {student.major} not available")
             return False
         except Exception:
@@ -125,7 +126,7 @@ class AcademicRegistrar():
     def add_course_to_dep(self, course: 'Course'):
         """Adds course to department"""
         try:
-            department = self.get_department(course.department)
+            department: Department = self.get_department(course.department)
             if department:
                 department.add_course(course)
                 logger.info("Course successfully added to department")
@@ -133,3 +134,5 @@ class AcademicRegistrar():
         except Exception:
             logger.exception("Something went wrong!")
             return False
+        
+    #def show_department_courses(department: 'Department'):

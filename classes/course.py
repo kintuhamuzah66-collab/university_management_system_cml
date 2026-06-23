@@ -13,6 +13,11 @@ class Course:
 
         self._codecourse_units = []
 
+    def __eq__(self, other):
+        if not isinstance(other, Course):
+            return False
+        return self.course_code == other.course_code
+
     @property
     def code(self):
         return self._code 

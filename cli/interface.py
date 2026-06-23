@@ -41,7 +41,7 @@ def menu():
         if choice == "1":
             # Register student
             full_name = input("Enter full name: ").strip()
-            major = input("Enter major (course): ").strip()
+            major = input("Enter major (course code): ").strip()
             student_id = input("Assign personal number: ").strip()
 
             student = Student(student_id, full_name, major)
