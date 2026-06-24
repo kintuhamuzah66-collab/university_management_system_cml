@@ -7,6 +7,7 @@ if TYPE_CHECKING:
     from classes.lecturer import Lecturer
     from classes.department import Department
     from classes.course import Course
+    from classes.course_unit import CourseUnit
 
 class AcademicRegistrar():
     def __init__(self):
@@ -148,3 +149,23 @@ class AcademicRegistrar():
         except Exception:
             logger.exception("Something went wrong!")
             return False
+        
+    def add_course_unit_to_course(self, dep_name, course_code, course_unit: 'CourseUnit'):
+        """Adds course unit to a department course"""
+        try:
+            department: 'Department' = self.get_department(dep_name)
+            if department:
+                for course in department.courses:
+                    if course.code == course_code:
+                        if course_unit not in course.course_units:
+                            course.add_course_unit(course_unit)
+                            logger.info(f"{course_unit.name} successfully added to {department.name} courses")
+                            return True
+                        logger.warning(f"{course_unit.name} already exists!")
+                        return False
+        except Exception:
+            logger.exception("Something went wrong")
+            return False
+                        
+    def show_course_units_in_dep_course(self, dep_name, course_code):
+        """returns course units in department course"""

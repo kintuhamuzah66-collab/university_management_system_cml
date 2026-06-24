@@ -33,8 +33,9 @@ def menu():
         print("9. Search department")
         print("10. Add course to department")
         print("11. Show available courses in department")
+        print("12. Add course unit to department course")
 
-        print("12. Exit\n")
+        print("13. Exit\n")
 
         choice = input("Enter choice: ")
         print("\n")
@@ -115,5 +116,24 @@ def menu():
             else:
                 print("No course found!")
         elif choice == "12":
+            # add course unit to department course
+            dep_name = input("Enter department name: ").strip()
+            course_code = input("Enter course code: ").strip()
+            course_unit_name = input("Enter course unit name: ").strip()
+            course_unit_code = input("Enter course unit code: ").strip()
+            
+            department = registrar.get_department(dep_name)
+            if department:
+                for course in department.courses:
+                    if course.code == course_code:
+                        course_unit = CourseUnit(course_unit_code, course_unit_name)
+                        registrar.add_course_unit_to_course(dep_name, course_code, course_unit)
+                        print(f"{course_unit.name} successfully added to {course.name}")
+                        return True
+                print("Failed to add course unit")
+                return False
+            print("Department not found!")
+            
+        elif choice == "13":
             print("Exiting......")
             break

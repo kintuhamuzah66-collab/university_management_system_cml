@@ -11,7 +11,7 @@ class Course:
         self.name = name
         self.department = department
 
-        self._codecourse_units = []
+        self._course_units = []
 
     def __eq__(self, other):
         if not isinstance(other, Course):

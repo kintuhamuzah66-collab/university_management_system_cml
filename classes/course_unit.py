@@ -9,6 +9,9 @@ class CourseUnit:
         self._enrolled_student_ids = []
         self._lecturer_ids = []
 
+    def __eq__(self, other):
+        return self.code == other.code
+    
     # code properties
     @property
     def code(self):
