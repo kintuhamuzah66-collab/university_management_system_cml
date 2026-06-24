@@ -6,8 +6,8 @@ class CourseUnit:
         self.code = code
         self.name = name
 
-        self.enrolled_student_ids = []
-        self.lecturer_ids = []
+        self._enrolled_student_ids = []
+        self._lecturer_ids = []
 
     # code properties
     @property

@@ -82,3 +82,31 @@ AttributeError: property 'course_units' of 'Course' object has no setter
 2026-06-23 22:36:30,988 - INFO - Student successfully registered to university
 2026-06-23 22:36:30,988 - INFO - Student successfully registered
 2026-06-23 22:40:54,039 - INFO - main stopped
+2026-06-24 05:56:06,351 - INFO - main started!
+2026-06-24 05:57:06,478 - WARNING - Course bacs24dua0235 not available
+2026-06-24 05:57:27,949 - INFO - Department name set to: science and technology
+2026-06-24 05:57:27,949 - INFO - science and technology successfully added to departments
+2026-06-24 05:57:55,664 - WARNING - Department with name computer science not found!
+2026-06-24 05:58:17,110 - INFO - Department with name: science and technology successfully found
+2026-06-24 05:58:31,257 - INFO - Course code set to: bacs
+2026-06-24 05:58:31,257 - INFO - Course name set to computer science
+2026-06-24 05:58:31,257 - INFO - computer science successfully added to science and technology department
+2026-06-24 05:58:55,423 - WARNING - Course ba not available
+2026-06-24 05:59:24,436 - INFO - Student successfully registered to university
+2026-06-24 05:59:24,436 - INFO - Student successfully registered
+2026-06-24 05:59:49,421 - INFO - Department with name: science and technology successfully found
+2026-06-24 05:59:49,422 - INFO - Returned department courses
+2026-06-24 06:32:52,198 - INFO - main started!
+2026-06-24 06:33:30,354 - INFO - Department name set to: science and technology
+2026-06-24 06:33:30,354 - INFO - science and technology successfully added to departments
+2026-06-24 06:33:58,963 - INFO - Department with name: science and technology successfully found
+2026-06-24 06:35:02,774 - INFO - Course code set to: bacs
+2026-06-24 06:35:02,775 - INFO - Course name set to computer science
+2026-06-24 06:35:02,775 - INFO - computer science successfully added to science and technology department
+2026-06-24 06:35:40,785 - INFO - Student successfully registered to university
+2026-06-24 06:35:40,785 - INFO - Student successfully registered
+2026-06-24 06:36:04,959 - INFO - Department with name: science and technology successfully found
+2026-06-24 06:36:04,960 - INFO - Returned department courses
+2026-06-24 06:38:57,362 - INFO - main stopped
+2026-06-24 06:39:00,533 - INFO - main started!
+2026-06-24 06:39:56,864 - INFO - main stopped

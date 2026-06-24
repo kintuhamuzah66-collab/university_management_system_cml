@@ -17,6 +17,9 @@ class Course:
         if not isinstance(other, Course):
             return False
         return self.course_code == other.course_code
+    
+    def __str__(self):
+        return f"Course Code: {self.code} Course Name: {self.name}"
 
     @property
     def code(self):

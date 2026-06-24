@@ -17,7 +17,7 @@ def menu():
     registrar = AcademicRegistrar()
 
     while True:
-        print("\nMange Students". center(30))
+        print("Manage Students". center(30))
         print("1. Register Student")
         print("2. Show registered students")
         print("3. Search student")
@@ -32,8 +32,9 @@ def menu():
         print("8. Show registered departments")
         print("9. Search department")
         print("10. Add course to department")
+        print("11. Show available courses in department")
 
-        print("11. Exit\n\n")
+        print("12. Exit\n")
 
         choice = input("Enter choice: ")
         print("\n")
@@ -104,5 +105,15 @@ def menu():
             else:
                 print("Adding course failed!")
         elif choice == "11":
+            # show available courses in a department
+            department_name: 'Department' = input("Enter department name: ").strip()
+            dep_courses = registrar.show_department_courses(department_name)
+
+            if dep_courses:
+                for course in dep_courses:
+                    print(course)
+            else:
+                print("No course found!")
+        elif choice == "12":
             print("Exiting......")
             break

@@ -135,4 +135,16 @@ class AcademicRegistrar():
             logger.exception("Something went wrong!")
             return False
         
-    #def show_department_courses(department: 'Department'):
+    def show_department_courses(self, dep_name: str):
+        """Shows the courses offered by a department"""
+        try:
+            department: 'Department' = self.get_department(dep_name)
+            if department:
+                if len(department.courses) == 0:
+                    logger.warning("Department has no courses yet")
+                    return False
+                logger.info("Returned department courses")
+                return department.courses
+        except Exception:
+            logger.exception("Something went wrong!")
+            return False
