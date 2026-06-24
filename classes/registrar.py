@@ -169,3 +169,17 @@ class AcademicRegistrar():
                         
     def show_course_units_in_dep_course(self, dep_name, course_code):
         """returns course units in department course"""
+        try:
+            department: 'Department' = self.get_department(dep_name)
+            if department:
+                for course in department.courses:
+                    if course.code == course_code:
+                        logger.info(f"{course.name} successfully found in {department.name}")
+                        return course.course_units
+            else:
+                logger.warning("Department not found!")
+                return False
+        except Exception:
+            logger.exception("Something went wrong!")
+            return False
+        

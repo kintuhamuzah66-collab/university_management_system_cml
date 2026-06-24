@@ -16,7 +16,7 @@ class Course:
     def __eq__(self, other):
         if not isinstance(other, Course):
             return False
-        return self.course_code == other.course_code
+        return self.code == other.code
     
     def __str__(self):
         return f"Course Code: {self.code} Course Name: {self.name}"

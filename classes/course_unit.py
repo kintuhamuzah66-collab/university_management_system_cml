@@ -12,6 +12,9 @@ class CourseUnit:
     def __eq__(self, other):
         return self.code == other.code
     
+    def __str__(self):
+        return f"Course code: {self.code}, Course name: {self.name}"
+    
     # code properties
     @property
     def code(self):

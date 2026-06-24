@@ -200,3 +200,96 @@ AttributeError: 'Course' object has no attribute '_course_units'. Did you mean: 
 2026-06-24 08:10:10,961 - INFO - data structures successfully added to computer science
 2026-06-24 08:10:10,961 - INFO - data structures successfully added to science and technology courses
 2026-06-24 08:10:10,961 - INFO - main stopped
+2026-06-24 20:45:33,501 - INFO - main started!
+2026-06-24 20:45:46,383 - INFO - Department name set to: science and technology
+2026-06-24 20:45:46,384 - INFO - science and technology successfully added to departments
+2026-06-24 20:45:57,643 - INFO - Department with name: science and technology successfully found
+2026-06-24 20:46:09,119 - INFO - Course code set to: BACS
+2026-06-24 20:46:09,119 - INFO - Course name set to computer science
+2026-06-24 20:46:09,120 - INFO - computer science successfully added to science and technology department
+2026-06-24 20:47:16,707 - INFO - Department with name: science and technology successfully found
+2026-06-24 20:47:16,707 - INFO - Returned department courses
+2026-06-24 20:51:16,818 - INFO - Department with name: science and technology successfully found
+2026-06-24 20:51:16,818 - INFO - Department with name: science and technology successfully found
+2026-06-24 20:51:16,818 - INFO - DSA successfully added to computer science
+2026-06-24 20:51:16,819 - INFO - DSA successfully added to science and technology courses
+2026-06-24 20:51:16,819 - INFO - main stopped
+2026-06-24 20:54:33,235 - INFO - main started!
+2026-06-24 20:54:41,107 - INFO - Department name set to: science and tech
+2026-06-24 20:54:41,107 - INFO - science and tech successfully added to departments
+2026-06-24 20:55:13,663 - INFO - Department with name: science and tech successfully found
+2026-06-24 20:55:55,054 - INFO - Course code set to: BACS
+2026-06-24 20:55:55,054 - INFO - Course name set to computer science
+2026-06-24 20:55:55,055 - INFO - computer science successfully added to science and tech department
+2026-06-24 20:56:05,618 - INFO - Department with name: science and tech successfully found
+2026-06-24 20:56:05,618 - INFO - Returned department courses
+2026-06-24 20:56:37,273 - INFO - Department with name: science and tech successfully found
+2026-06-24 20:56:37,274 - INFO - Department with name: science and tech successfully found
+2026-06-24 20:56:37,274 - INFO - data structures successfully added to computer science
+2026-06-24 20:56:37,274 - INFO - data structures successfully added to science and tech courses
+2026-06-24 20:56:37,275 - INFO - main stopped
+2026-06-24 20:58:52,220 - INFO - main started!
+2026-06-24 20:58:58,093 - INFO - Department name set to: science and tech
+2026-06-24 20:58:58,093 - INFO - science and tech successfully added to departments
+2026-06-24 21:00:13,438 - INFO - Department with name: science and tech successfully found
+2026-06-24 21:00:21,264 - INFO - Course code set to: BACS
+2026-06-24 21:00:21,264 - INFO - Course name set to computer science
+2026-06-24 21:00:21,264 - INFO - computer science successfully added to science and tech department
+2026-06-24 21:00:36,577 - INFO - Department with name: science and tech successfully found
+2026-06-24 21:00:49,114 - INFO - Course code set to: BAIT
+2026-06-24 21:00:49,115 - INFO - Course name set to information tech
+2026-06-24 21:00:49,115 - ERROR - Something went wrong
+Traceback (most recent call last):
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/main.py", line 17, in <module>
+    menu()
+    ~~~~^^
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/cli/interface.py", line 105, in menu
+    department.add_course(course)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/classes/department.py", line 40, in add_course
+    if course in self._courses:
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/classes/course.py", line 19, in __eq__
+    return self.course_code == other.course_code
+           ^^^^^^^^^^^^^^^^
+AttributeError: 'Course' object has no attribute 'course_code'
+2026-06-24 21:03:36,701 - INFO - main started!
+2026-06-24 21:03:45,697 - INFO - Department name set to: science and tech
+2026-06-24 21:03:45,698 - INFO - science and tech successfully added to departments
+2026-06-24 21:04:54,185 - INFO - Department with name: science and tech successfully found
+2026-06-24 21:05:24,072 - INFO - Course code set to: BACS
+2026-06-24 21:05:24,073 - INFO - Course name set to computer science
+2026-06-24 21:05:24,073 - INFO - computer science successfully added to science and tech department
+2026-06-24 21:05:42,796 - INFO - Department with name: science and tech successfully found
+2026-06-24 21:05:58,074 - INFO - Course code set to: BAIT
+2026-06-24 21:05:58,074 - INFO - Course name set to information tech
+2026-06-24 21:05:58,074 - INFO - information tech successfully added to science and tech department
+2026-06-24 21:06:11,592 - INFO - Department with name: science and tech successfully found
+2026-06-24 21:06:11,592 - INFO - Returned department courses
+2026-06-24 21:06:47,325 - INFO - Department with name: science and tech successfully found
+2026-06-24 21:06:47,325 - INFO - Department with name: science and tech successfully found
+2026-06-24 21:06:47,326 - INFO - data structures successfully added to computer science
+2026-06-24 21:06:47,326 - INFO - data structures successfully added to science and tech courses
+2026-06-24 21:06:47,326 - INFO - main stopped
+2026-06-24 21:09:46,884 - INFO - main started!
+2026-06-24 21:10:05,644 - INFO - Department name set to: science and tech
+2026-06-24 21:10:05,644 - INFO - science and tech successfully added to departments
+2026-06-24 21:10:42,067 - INFO - Department with name: science and tech successfully found
+2026-06-24 21:11:01,501 - INFO - Course code set to: BACS
+2026-06-24 21:11:01,502 - INFO - Course name set to computer science
+2026-06-24 21:11:01,502 - INFO - computer science successfully added to science and tech department
+2026-06-24 21:11:26,971 - INFO - Department with name: science and tech successfully found
+2026-06-24 21:11:26,971 - INFO - Returned department courses
+2026-06-24 21:12:45,961 - INFO - Department with name: science and tech successfully found
+2026-06-24 21:12:45,962 - INFO - Department with name: science and tech successfully found
+2026-06-24 21:12:45,962 - INFO - data structures successfully added to computer science
+2026-06-24 21:12:45,962 - INFO - data structures successfully added to science and tech courses
+2026-06-24 21:13:49,228 - INFO - Department with name: science and tech successfully found
+2026-06-24 21:13:49,229 - INFO - computer science successfully found in science and tech
+2026-06-24 21:16:28,921 - INFO - Department with name: science and tech successfully found
+2026-06-24 21:16:28,921 - INFO - Department with name: science and tech successfully found
+2026-06-24 21:16:28,922 - INFO - artificial intelligence successfully added to computer science
+2026-06-24 21:16:28,922 - INFO - artificial intelligence successfully added to science and tech courses
+2026-06-24 21:16:42,410 - INFO - Department with name: science and tech successfully found
+2026-06-24 21:16:42,410 - INFO - computer science successfully found in science and tech
+2026-06-24 21:17:30,612 - INFO - main stopped
