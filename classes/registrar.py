@@ -183,3 +183,27 @@ class AcademicRegistrar():
             logger.exception("Something went wrong!")
             return False
         
+    def enroll_student_in_course_unit(self, personal_id, dep_name, course_unit_code):
+        try:
+            student = self.get_student(personal_id)
+            if student:
+                department = self.get_department(dep_name)
+                if department:
+                    for course in department.courses:
+                        if course.code == student.major:
+                            for course_unit in course.course_units:
+                                if course_unit.code == course_unit_code:
+                                    course_unit.enroll_student(student.personal_id)
+                                    logger.info("{student.full_name} successfully enrolled to {course_unit.name}")
+                                    return True
+                            logger.warning("Course unit not found")
+                            return False
+                else:
+                    logger.warning("Department not found!")
+                    return False
+            else:
+                logger.warning("student not found!")
+                return False
+        except Exception:
+            logger.exception("Something went wrong!")
+            return False

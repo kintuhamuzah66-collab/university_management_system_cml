@@ -292,4 +292,28 @@ AttributeError: 'Course' object has no attribute 'course_code'
 2026-06-24 21:16:28,922 - INFO - artificial intelligence successfully added to science and tech courses
 2026-06-24 21:16:42,410 - INFO - Department with name: science and tech successfully found
 2026-06-24 21:16:42,410 - INFO - computer science successfully found in science and tech
-2026-06-24 21:17:30,612 - INFO - main stopped
+2026-06-24 21:17:30,612 - INFO - main stopped2026-06-25 11:41:01,431 - INFO - main started!
+2026-06-25 11:41:13,104 - INFO - Department name set to: science and tech
+2026-06-25 11:41:13,104 - INFO - science and tech successfully added to departments
+2026-06-25 11:41:31,737 - INFO - Department with name: science and tech successfully found
+2026-06-25 11:41:31,738 - WARNING - Department has no courses yet
+2026-06-25 11:41:44,736 - INFO - Department with name: science and tech successfully found
+2026-06-25 11:42:09,619 - INFO - Course code set to: BACS
+2026-06-25 11:42:09,619 - INFO - Course name set to computer science
+2026-06-25 11:42:09,619 - INFO - computer science successfully added to science and tech department
+2026-06-25 11:42:20,254 - INFO - Department with name: science and tech successfully found
+2026-06-25 11:42:20,255 - INFO - Returned department courses
+2026-06-25 11:42:48,823 - INFO - Department with name: science and tech successfully found
+2026-06-25 11:42:48,824 - INFO - Department with name: science and tech successfully found
+2026-06-25 11:42:48,824 - INFO - data structures successfully added to computer science
+2026-06-25 11:42:48,825 - INFO - data structures successfully added to science and tech courses
+2026-06-25 11:43:05,619 - INFO - Department with name: science and tech successfully found
+2026-06-25 11:43:05,620 - INFO - computer science successfully found in science and tech
+2026-06-25 11:43:23,685 - WARNING - Student not found!
+2026-06-25 11:43:23,686 - WARNING - student not found!
+2026-06-25 11:45:28,401 - INFO - Student successfully registered to university
+2026-06-25 11:45:28,401 - INFO - Student successfully registered
+2026-06-25 11:47:02,736 - INFO - Student kintu hamza is found
+2026-06-25 11:47:02,736 - INFO - Department with name: science and tech successfully found
+2026-06-25 11:47:02,736 - INFO - {student.full_name} successfully enrolled to {course_unit.name}
+2026-06-25 11:53:10,515 - INFO - main stopped

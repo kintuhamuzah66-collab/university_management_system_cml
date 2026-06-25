@@ -17,10 +17,12 @@ def menu():
     registrar = AcademicRegistrar()
 
     while True:
+        print()
         print("Manage Students". center(30))
         print("1. Register Student")
         print("2. Show registered students")
         print("3. Search student")
+        print("s4. Enroll student in course_unit")
 
         print("Manage Lecturers".center(30))
         print("4. Register Lecturer")
@@ -43,6 +45,7 @@ def menu():
 
         if choice == "1":
             # Register student
+            print("REGISTER STUDENT".center(60, "-"))
             full_name = input("Enter full name: ").strip()
             major = input("Enter major (course code): ").strip()
             student_id = input("Assign personal number: ").strip()
@@ -63,6 +66,20 @@ def menu():
                 print(student)
             else:
                 print("Student not found!")
+        elif choice == "s4":
+            # Enroll student in course unit
+            student_id = input("enter student id: ").strip()
+            dep_name = input("Enter department name: ").strip()
+            course_unit_code = input("Enter course unit name: ").strip()
+            
+            register = registrar.enroll_student_in_course_unit(student_id, dep_name, course_unit_code)
+            if not register:
+                print(f"Student enrollment to course unit {course_unit_code} failed!")
+            else:
+                print(f"{student_id} successfully enrolled into {course_unit_code}")
+        elif choice == "s5":
+            # show students enrolled in a course unit
+            
         elif choice == "4":
             pass
         elif choice == "5":
@@ -146,4 +163,3 @@ def menu():
         elif choice == "14":
             print("Exiting......")
             break
-        
