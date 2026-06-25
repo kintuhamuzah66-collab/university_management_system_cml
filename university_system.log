@@ -317,3 +317,151 @@ AttributeError: 'Course' object has no attribute 'course_code'
 2026-06-25 11:47:02,736 - INFO - Department with name: science and tech successfully found
 2026-06-25 11:47:02,736 - INFO - {student.full_name} successfully enrolled to {course_unit.name}
 2026-06-25 11:53:10,515 - INFO - main stopped
+2026-06-25 12:41:27,443 - INFO - main started!
+2026-06-25 12:43:51,260 - INFO - Department name set to: science and tech
+2026-06-25 12:43:51,261 - INFO - science and tech successfully added to departments
+2026-06-25 12:43:58,790 - WARNING - Department with name computer science not found!
+2026-06-25 12:45:28,224 - INFO - Department with name: science and tech successfully found
+2026-06-25 12:45:28,225 - WARNING - Department has no courses yet
+2026-06-25 12:45:39,740 - INFO - Department with name: science and tech successfully found
+2026-06-25 12:45:54,852 - INFO - Course code set to: BACS
+2026-06-25 12:45:54,852 - INFO - Course name set to computer science
+2026-06-25 12:45:54,853 - INFO - computer science successfully added to science and tech department
+2026-06-25 12:46:29,188 - INFO - Student successfully registered to university
+2026-06-25 12:46:29,188 - INFO - Student successfully registered
+2026-06-25 12:47:26,726 - INFO - Student kintu hamza is found
+2026-06-25 12:47:26,727 - INFO - Department with name: science and tech successfully found
+2026-06-25 12:47:26,727 - WARNING - Course unit not found
+2026-06-25 12:48:11,848 - INFO - Department with name: science and tech successfully found
+2026-06-25 12:48:11,849 - INFO - Department with name: science and tech successfully found
+2026-06-25 12:48:11,849 - INFO - data structures successfully added to computer science
+2026-06-25 12:48:11,849 - INFO - data structures successfully added to science and tech courses
+2026-06-25 12:48:29,859 - INFO - Department with name: science and tech successfully found
+2026-06-25 12:48:29,859 - INFO - computer science successfully found in science and tech
+2026-06-25 12:49:08,920 - INFO - Student kintu hamza is found
+2026-06-25 12:49:08,921 - INFO - Department with name: science and tech successfully found
+2026-06-25 12:49:08,921 - INFO - {student.full_name} successfully enrolled to {course_unit.name}
+2026-06-25 12:49:58,407 - INFO - Department with name: science and tech successfully found
+2026-06-25 12:49:58,407 - INFO - data structures successfully found!
+2026-06-25 12:49:58,407 - ERROR - Something went wrong
+Traceback (most recent call last):
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/main.py", line 17, in <module>
+    menu()
+    ~~~~^^
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/cli/interface.py", line 89, in menu
+    students = [student for student in students if student.code in codes]
+                                                   ^^^^^^^^^^^^
+AttributeError: 'Student' object has no attribute 'code'
+2026-06-25 12:52:53,215 - INFO - main started!
+2026-06-25 12:52:59,439 - INFO - Department name set to: science and tech
+2026-06-25 12:52:59,440 - INFO - science and tech successfully added to departments
+2026-06-25 12:53:08,027 - INFO - Department with name: science and tech successfully found
+2026-06-25 12:53:22,160 - INFO - Course code set to: BACS
+2026-06-25 12:53:22,160 - INFO - Course name set to computer science
+2026-06-25 12:53:22,161 - INFO - computer science successfully added to science and tech department
+2026-06-25 12:53:55,534 - INFO - Department with name: science and tech successfully found
+2026-06-25 12:53:55,535 - INFO - Department with name: science and tech successfully found
+2026-06-25 12:53:55,535 - INFO - data structures successfully added to computer science
+2026-06-25 12:53:55,535 - INFO - data structures successfully added to science and tech courses
+2026-06-25 12:54:07,780 - INFO - Department with name: science and tech successfully found
+2026-06-25 12:54:07,781 - INFO - computer science successfully found in science and tech
+2026-06-25 12:54:30,179 - INFO - Student successfully registered to university
+2026-06-25 12:54:30,179 - INFO - Student successfully registered
+2026-06-25 12:55:40,049 - INFO - Student kintu hamza is found
+2026-06-25 12:55:40,050 - INFO - Department with name: science and tech successfully found
+2026-06-25 12:55:40,050 - INFO - {student.full_name} successfully enrolled to {course_unit.name}
+2026-06-25 12:56:25,836 - INFO - Department with name: science and tech successfully found
+2026-06-25 12:56:25,836 - INFO - data structures successfully found!
+2026-06-25 12:56:25,836 - ERROR - Something went wrong
+Traceback (most recent call last):
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/main.py", line 17, in <module>
+    menu()
+    ~~~~^^
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/cli/interface.py", line 92, in menu
+    for student in range(len(students)):
+                             ^^^^^^^^
+UnboundLocalError: cannot access local variable 'students' where it is not associated with a value
+2026-06-25 12:57:25,347 - INFO - main started!
+2026-06-25 12:57:33,923 - INFO - Department name set to: science and tech
+2026-06-25 12:57:33,923 - INFO - science and tech successfully added to departments
+2026-06-25 12:57:54,920 - INFO - Department with name: science and tech successfully found
+2026-06-25 12:59:08,469 - INFO - Course code set to: BACS
+2026-06-25 12:59:08,470 - INFO - Course name set to computer science
+2026-06-25 12:59:08,470 - INFO - computer science successfully added to science and tech department
+2026-06-25 13:00:02,602 - INFO - Student successfully registered to university
+2026-06-25 13:00:02,602 - INFO - Student successfully registered
+2026-06-25 13:00:20,580 - INFO - Department with name: science and tech successfully found
+2026-06-25 13:00:20,580 - INFO - Returned department courses
+2026-06-25 13:01:07,349 - INFO - Department with name: science and tech successfully found
+2026-06-25 13:01:07,350 - INFO - Department with name: science and tech successfully found
+2026-06-25 13:01:07,350 - INFO - data structures and algorithms successfully added to computer science
+2026-06-25 13:01:07,350 - INFO - data structures and algorithms successfully added to science and tech courses
+2026-06-25 13:01:30,846 - WARNING - Department with name science and technology not found!
+2026-06-25 13:01:30,847 - WARNING - Department not found!
+2026-06-25 13:01:30,847 - ERROR - Something went wrong
+Traceback (most recent call last):
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/main.py", line 17, in <module>
+    menu()
+    ~~~~^^
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/cli/interface.py", line 167, in menu
+    if len(course_units):
+       ~~~^^^^^^^^^^^^^^
+TypeError: object of type 'bool' has no len()
+2026-06-25 13:04:06,422 - INFO - main started!
+2026-06-25 13:05:14,814 - INFO - Department name set to: science and tech
+2026-06-25 13:05:14,814 - INFO - science and tech successfully added to departments
+2026-06-25 13:05:27,105 - INFO - Department with name: science and tech successfully found
+2026-06-25 13:05:46,171 - INFO - Course code set to: BACS
+2026-06-25 13:05:46,172 - INFO - Course name set to computer science
+2026-06-25 13:05:46,172 - INFO - computer science successfully added to science and tech department
+2026-06-25 13:06:13,206 - INFO - Department with name: science and tech successfully found
+2026-06-25 13:06:13,207 - INFO - Department with name: science and tech successfully found
+2026-06-25 13:06:13,207 - INFO - data structures successfully added to computer science
+2026-06-25 13:06:13,208 - INFO - data structures successfully added to science and tech courses
+2026-06-25 13:07:30,732 - INFO - Department with name: science and tech successfully found
+2026-06-25 13:07:30,732 - INFO - Department with name: science and tech successfully found
+2026-06-25 13:07:30,732 - WARNING - DSA already exists!
+2026-06-25 13:07:57,126 - INFO - Department with name: science and tech successfully found
+2026-06-25 13:07:57,126 - INFO - computer science successfully found in science and tech
+2026-06-25 13:08:47,663 - WARNING - Student not found!
+2026-06-25 13:08:47,664 - WARNING - student not found!
+2026-06-25 13:09:28,038 - INFO - Student successfully registered to university
+2026-06-25 13:09:28,038 - INFO - Student successfully registered
+2026-06-25 13:09:56,913 - INFO - Student kintu hamza is found
+2026-06-25 13:09:56,914 - INFO - Department with name: science and tech successfully found
+2026-06-25 13:09:56,914 - WARNING - Course unit not found
+2026-06-25 13:10:38,380 - INFO - Student kintu hamza is found
+2026-06-25 13:10:38,380 - INFO - Department with name: science and tech successfully found
+2026-06-25 13:10:38,381 - INFO - {student.full_name} successfully enrolled to {course_unit.name}
+2026-06-25 13:11:02,444 - INFO - Department with name: science and tech successfully found
+2026-06-25 13:11:02,444 - WARNING - DSA not found
+2026-06-25 13:11:02,444 - ERROR - Something went wrong
+Traceback (most recent call last):
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/main.py", line 17, in <module>
+    menu()
+    ~~~~^^
+  File "/media/kintu/personal/software_engineering/projects/university_management_system_cml/cli/interface.py", line 88, in menu
+    if len(codes) > 0:
+       ~~~^^^^^^^
+TypeError: object of type 'bool' has no len()
+2026-06-25 13:11:58,757 - INFO - main started!
+2026-06-25 13:12:03,375 - INFO - Department name set to: science
+2026-06-25 13:12:03,375 - INFO - science successfully added to departments
+2026-06-25 13:12:16,749 - INFO - Department with name: science successfully found
+2026-06-25 13:12:29,802 - INFO - Course code set to: BACS
+2026-06-25 13:12:29,802 - INFO - Course name set to computer science
+2026-06-25 13:12:29,803 - INFO - computer science successfully added to science department
+2026-06-25 13:12:42,349 - INFO - Student successfully registered to university
+2026-06-25 13:12:42,350 - INFO - Student successfully registered
+2026-06-25 13:13:06,848 - INFO - Department with name: science successfully found
+2026-06-25 13:13:06,849 - INFO - Department with name: science successfully found
+2026-06-25 13:13:06,849 - INFO - Data structures successfully added to computer science
+2026-06-25 13:13:06,849 - INFO - Data structures successfully added to science courses
+2026-06-25 13:14:07,842 - INFO - Student kintu hamza is found
+2026-06-25 13:14:07,842 - INFO - Department with name: science successfully found
+2026-06-25 13:14:07,842 - INFO - {student.full_name} successfully enrolled to {course_unit.name}
+2026-06-25 13:14:38,393 - INFO - Department with name: science successfully found
+2026-06-25 13:14:38,393 - WARNING - DSA not found
+2026-06-25 13:15:02,586 - INFO - Department with name: science successfully found
+2026-06-25 13:15:02,587 - INFO - Data structures successfully found!
+2026-06-25 13:36:19,347 - INFO - main stopped

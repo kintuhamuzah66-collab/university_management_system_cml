@@ -207,3 +207,22 @@ class AcademicRegistrar():
         except Exception:
             logger.exception("Something went wrong!")
             return False
+        
+    def show_students_enrolled_in_course(self, dep_name, course_code, course_unit_code):
+        """Shows the students enrolled in a course"""
+        try:
+            department = self.get_department(dep_name)
+            if not department:
+                logger.warning(f"{department.name} not found!")
+                return False
+            for course in department.courses:
+                if course.code == course_code:
+                    for course_unit in course.course_units:
+                        if course_unit.code == course_unit_code:
+                            logger.info(f"{course_unit.name} successfully found!")
+                            return course_unit.enrolled_student_ids
+            logger.warning(f"{course_code} not found")
+            return False
+        except Exception:
+                logger.exception("Something went wrong!")
+                return False

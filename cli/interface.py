@@ -23,6 +23,7 @@ def menu():
         print("2. Show registered students")
         print("3. Search student")
         print("s4. Enroll student in course_unit")
+        print("s5. Show students enrolled in course_unit")
 
         print("Manage Lecturers".center(30))
         print("4. Register Lecturer")
@@ -79,7 +80,16 @@ def menu():
                 print(f"{student_id} successfully enrolled into {course_unit_code}")
         elif choice == "s5":
             # show students enrolled in a course unit
-            
+            dep_name = input("Enter department name: ").strip()
+            course_code = input("Enter course code: ").strip()
+            course_unit_code = input("Enter course unit code: ").strip()
+
+            codes = registrar.show_students_enrolled_in_course(dep_name, course_code, course_unit_code)
+            if not codes:
+                print("No enrolled students found!")
+            else:
+                for code in codes:
+                    print(code)
         elif choice == "4":
             pass
         elif choice == "5":
@@ -156,7 +166,9 @@ def menu():
             course_code = input("Enter course code: ").strip()
 
             course_units = registrar.show_course_units_in_dep_course(dep_name, course_code)
-            if len(course_units):
+            if not course_units:
+                print("No course units found!")
+            else:
                 for course_unit in course_units:
                     print(course_unit)
             
