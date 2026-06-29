@@ -9,12 +9,14 @@ from classes.lecturer import Lecturer
 from classes.registrar import AcademicRegistrar
 from classes.student import Student
 
+DATA_FILE = "University_data.json"
 
 def menu():
     print("SLAU Management System".center(30, "-"))
     print("\n")
 
-    registrar = AcademicRegistrar()
+    # Load existing data or start fresh if no file exists yet
+    registrar = AcademicRegistrar.load(DATA_FILE) or AcademicRegistrar()
 
     while True:
         print()
@@ -39,7 +41,9 @@ def menu():
         print("12. Add course unit to department course")
         print("13. Show course units in a department course")
 
-        print("14. Exit\n")
+        print("System".center(60))
+        print("14. Save")
+        print("15. Exit\n")
 
         choice = input("Enter choice: ")
         print("\n")
@@ -173,5 +177,11 @@ def menu():
                     print(course_unit)
             
         elif choice == "14":
+            if registrar.save(DATA_FILE):
+                print("Data saved successfully!")
+            else:
+                print("Save failed!")
+                
+        elif choice == "15":
             print("Exiting......")
             break

@@ -1,4 +1,7 @@
 from typing import TYPE_CHECKING
+import json
+from classes.serialization import AcademicRegistrarEncoder, academic_registrar_decoder
+
 import logging
 logger = logging.getLogger(__name__)
 
@@ -226,3 +229,30 @@ class AcademicRegistrar():
         except Exception:
                 logger.exception("Something went wrong!")
                 return False
+        
+    def save(self, filepath):
+        """Saves registrar state to a JSON file."""
+        try:
+            with open(filepath, "w", encoding="utf-8") as f:
+                json.dump(self, f, cls=AcademicRegistrarEncoder, indent=2)
+            logger.info(f"Registrar saved to {filepath}")
+            return True
+        except Exception:
+            logger.exception("Failed to save registrar")
+            return False
+
+    @classmethod
+    def load(cls, filepath):
+        """Loads and reconstructs a saved AcademicRegistrar from a JSON file."""
+        from pathlib import Path
+        if not Path(filepath).exists():
+            logger.warning(f"No saved data found at {filepath}")
+            return None
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                registrar = json.load(f, object_hook=academic_registrar_decoder)
+            logger.info(f"Registrar loaded from {filepath}")
+            return registrar
+        except Exception:
+            logger.exception("Failed to load registrar")
+            return None

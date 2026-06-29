@@ -18,7 +18,7 @@ class Student(Person):
     
     @major.setter 
     def major(self, value):
-        if not value or str(value).strip():
+        if not value or not str(value).strip():
             # log and raise error
             logger.error("Failed to set major. Major cannot be empty")
             raise ValueError("Major cannot be empty")
