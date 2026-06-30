@@ -465,3 +465,52 @@ TypeError: object of type 'bool' has no len()
 2026-06-25 13:15:02,586 - INFO - Department with name: science successfully found
 2026-06-25 13:15:02,587 - INFO - Data structures successfully found!
 2026-06-25 13:36:19,347 - INFO - main stopped
+2026-06-30 09:37:19,253 - INFO - main started!
+2026-06-30 09:37:19,272 - WARNING - No saved data found at University_data.json
+2026-06-30 09:37:45,721 - INFO - Department name set to: science and tech
+2026-06-30 09:37:45,722 - INFO - science and tech successfully added to departments
+2026-06-30 09:38:02,479 - INFO - Department with name: science and tech successfully found
+2026-06-30 09:38:12,964 - INFO - Department with name: science and tech successfully found
+2026-06-30 09:38:21,679 - INFO - Course code set to: BACS
+2026-06-30 09:38:21,680 - INFO - Course name set to computer science
+2026-06-30 09:38:21,680 - INFO - computer science successfully added to science and tech department
+2026-06-30 09:39:07,030 - INFO - Department with name: science and tech successfully found
+2026-06-30 09:39:07,030 - INFO - Returned department courses
+2026-06-30 09:39:39,395 - INFO - Department with name: science and tech successfully found
+2026-06-30 09:39:39,395 - INFO - Department with name: science and tech successfully found
+2026-06-30 09:39:39,396 - INFO - data structures and algorithms successfully added to computer science
+2026-06-30 09:39:39,396 - INFO - data structures and algorithms successfully added to science and tech courses
+2026-06-30 09:39:50,699 - INFO - Department with name: science and tech successfully found
+2026-06-30 09:39:50,700 - INFO - computer science successfully found in science and tech
+2026-06-30 09:40:39,727 - INFO - Student successfully registered to university
+2026-06-30 09:40:39,728 - INFO - Student successfully registered
+2026-06-30 09:41:05,940 - INFO - Student kintu hamza is found
+2026-06-30 09:42:07,298 - INFO - Student kintu hamza is found
+2026-06-30 09:42:07,298 - INFO - Department with name: science and tech successfully found
+2026-06-30 09:42:07,298 - INFO - {student.full_name} successfully enrolled to {course_unit.name}
+2026-06-30 09:42:31,849 - INFO - Department with name: science and tech successfully found
+2026-06-30 09:42:31,850 - WARNING - DSA not found
+2026-06-30 09:43:23,705 - INFO - Department with name: science and tech successfully found
+2026-06-30 09:43:23,706 - INFO - data structures and algorithms successfully found!
+2026-06-30 09:43:43,251 - INFO - Registrar saved to University_data.json
+2026-06-30 09:43:57,740 - INFO - Registrar saved to University_data.json
+2026-06-30 09:44:07,871 - INFO - main stopped
+2026-06-30 09:44:12,849 - INFO - main started!
+2026-06-30 09:44:12,863 - INFO - Course code set to: BACS
+2026-06-30 09:44:12,864 - INFO - Course name set to computer science
+2026-06-30 09:44:12,864 - INFO - data structures and algorithms successfully added to computer science
+2026-06-30 09:44:12,865 - INFO - Department name set to: science and tech
+2026-06-30 09:44:12,865 - INFO - computer science successfully added to science and tech department
+2026-06-30 09:44:12,865 - INFO - science and tech successfully added to departments
+2026-06-30 09:44:12,865 - INFO - Student successfully registered to university
+2026-06-30 09:44:12,866 - INFO - Registrar loaded from University_data.json
+2026-06-30 09:45:04,371 - INFO - main started!
+2026-06-30 09:45:04,382 - INFO - Course code set to: BACS
+2026-06-30 09:45:04,382 - INFO - Course name set to computer science
+2026-06-30 09:45:04,382 - INFO - data structures and algorithms successfully added to computer science
+2026-06-30 09:45:04,383 - INFO - Department name set to: science and tech
+2026-06-30 09:45:04,383 - INFO - computer science successfully added to science and tech department
+2026-06-30 09:45:04,383 - INFO - science and tech successfully added to departments
+2026-06-30 09:45:04,383 - INFO - Student successfully registered to university
+2026-06-30 09:45:04,383 - INFO - Registrar loaded from University_data.json
+2026-06-30 09:45:40,803 - INFO - main stopped

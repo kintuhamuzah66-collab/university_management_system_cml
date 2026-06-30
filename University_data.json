@@ -1,0 +1,37 @@
+{
+  "__type__": "AcademicRegistrar",
+  "departments": [
+    {
+      "__type__": "Department",
+      "name": "science and tech",
+      "courses": [
+        {
+          "__type__": "Course",
+          "code": "BACS",
+          "name": "computer science",
+          "department": "science and tech",
+          "course_units": [
+            {
+              "__type__": "CourseUnit",
+              "code": "DSA",
+              "name": "data structures and algorithms",
+              "enrolled_student_ids": [
+                "BACS24DUA0235"
+              ],
+              "lecturer_ids": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "students": [
+    {
+      "__type__": "Student",
+      "personal_id": "BACS24DUA0235",
+      "full_name": "kintu hamza",
+      "major": "BACS"
+    }
+  ],
+  "lecturers": []
+}
